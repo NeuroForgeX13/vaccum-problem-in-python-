@@ -1,0 +1,30 @@
+rooms={
+    "A":"dirty",
+    "B":"dirty"
+}
+position="A"
+action=[]
+
+while "dirty" in rooms.values():
+    if rooms[position]=="dirty":
+        rooms[position]="clean"
+        action.append("suck")
+        print("action suck")
+    elif position=="A":
+        position="B"
+        action.append("right")
+        print("action right")
+    elif position=="B":
+        position="A"
+        action.append("left")
+        print("action left")
+    
+
+print("rooms",rooms)
+print("action",action)
+
+print("len of action",len(action))
+
+
+
+
